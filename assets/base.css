@@ -1,0 +1,35 @@
+:root{ /*This part is used for declaring the main colors we want to use in our website (i.e varible declaration) */
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+
+    font-size: 62.5%;
+    /* 16px is 100%, % is based on the father tag and 62.5% is a trick to make rem unit easier to set*/
+    line-height: 1.6rem;
+    /* 16px */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%
+}
+
+.grip_row{
+    display: flex;
+    flex-wrap: wrap;
+}
+

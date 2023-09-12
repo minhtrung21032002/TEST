@@ -1,0 +1,182 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433,#f53e2d);
+}
+.header_navbar{
+    display: flex; /* lookup for flex box (i.e it can be the same like inline ) */
+    justify-content: space-between; /* make space between items */
+}
+.header_navbar-list{
+    list-style: none;
+    padding-left: 0;
+}
+.header_navbar-item{
+    margin: 0 8px;
+    position: relative;
+    margin-top: 4px;
+}
+.header_navbar-icon-link{
+    color: var(--white-color);
+}
+.header_navbar-item, 
+.header_navbar-item-link{
+    display: inline-block; /* make a block but in 1 line and can set up width and height */
+    font-size: 1.3rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+
+}
+
+.header_navbar-item:hover,
+.header_navbar-icon:hover, 
+.header_navbar-item-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7)
+}
+.header_navbar-item--strong{
+    font-weight: 900; /* make it bigger in weight */
+}
+.header_navbar-item--seperate::after{
+    content: "";
+    display: block; /* make a block for displaying */
+    position: absolute;
+    border-left: 1px solid #FB9086;
+    height: 14px;
+    right: -9px;
+    top: 15%;
+
+}
+.header_navbar-icon{
+    font-size: 3.2rem;
+    margin: 0 8px;
+    text-decoration: none;
+    
+}
+.header-navbar-title--no--pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+.header_navbar-item-has-qr:hover .header_qr{
+    display: block; /* hover can affect on children too */
+}
+.header_qr{
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 150%;
+    border-radius: 2px;
+    display: none;
+}
+.header_qr::before{
+    position:absolute;
+    content:"";
+    display: block;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    top: -18px;
+}
+
+.header_qr-img{
+    width: 100%;
+}
+.header_qr-download-img:nth-child(1){
+    margin-left: 12px;
+}
+.header_qr-download-img:nth-child(2){
+    margin-right: 10px;
+}
+.header_qr-download-img{
+    height: 14px;
+
+}
+.header_qr-app{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* notify */
+.header_notify{
+    position: absolute; /* make it on top of other elements */
+    top: 118%;
+    right: 0;
+    width: 300px;
+    background-color: var(--white-color);
+    cursor: default;
+    animation: headerNotifyGrow ease-in 0.3s;
+    display: none;
+}
+.header_navbar-item--has-notify:hover .header_notify{
+    display: block;
+}
+.header_notify::before{
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+
+    top: -19px;
+    position: absolute;
+}
+
+@keyframes headerNotifyGrow{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+  
+.header_notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+    
+}
+.header_notify-header h3{
+    color: #999;
+    margin: 0 0 0 14px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 40px;
+    
+}
+.header_notify-list{
+    padding-left: 0;
+}
+.header_notify-item{
+    list-style: none;
+}
+.header_notify-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%
+}
+.header_notify-img{
+    width: 48px;
+
+}
+.header_notify-body{
+    padding-left: 14px;
+}
+.header_notify-name{
+    display:block;
+    font-size: 14px;
+    color: black;
+}
+.header_notify-describe{
+    display:block;
+    font-size: 8px;
+    color: #999;
+    margin-top: 6px;
+    font-weight: 400px;
+}
+.header_notify-link{
+}
+.header_notify-footer{
+    color: black;
+    text-align: center; /* can lề */
+    
+}
